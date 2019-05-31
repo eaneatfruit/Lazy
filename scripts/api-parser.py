@@ -5,13 +5,15 @@ import json
 import urllib
 
 # Parse Function
-def parse(dictionary, api_string, url):
+def parse(apis, api_string, url):
    
    # Iterate through all dictionary key and values
-   for root_call, sub_call in dictionary.items():
+   for root_call, sub_call in apis.items():
 
       # This checks if the object (sub_call) is a dictionary classinfo, if it is, evaluates to True
       if isinstance(sub_call, dict):
+         
+         # Run the function again with the inner dictionary
          parse(sub_call, api_string, url)
       else:
          

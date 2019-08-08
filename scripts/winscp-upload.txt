@@ -1,0 +1,3 @@
+open user@127.0.0.1 -privatekey=c:\Users\user\Downloads\user.ppk
+put c:\Users\user\Desktop\ip-commando.txt /home/user/
+exit

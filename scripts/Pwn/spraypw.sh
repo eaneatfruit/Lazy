@@ -6,7 +6,7 @@
 
 for u in `cat domain-users.txt`;
 do
-        echo -n "[*] user: $u"
+        echo -n "[*] user: $u - "
         rpcclient -W DOMAIN.COM -U $u%password -c "getusername;quit" 192.168.1.1
 done
 

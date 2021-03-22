@@ -5,6 +5,12 @@
 # Supply a valid user and password when you have domain-level privilege\
 # Usage ./script.sh domain-users.txt pass.txt
 
+if [ $# -lt 2 ]
+then
+        echo "Usage: script.sh <users file> <passwords file>"
+        exit 1
+fi
+
 echo "[*] Starting bruteforce testing..."
 
 users="$1"
